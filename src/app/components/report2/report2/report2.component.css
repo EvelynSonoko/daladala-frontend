@@ -1,0 +1,40 @@
+.cont{
+    justify-content: center;
+    border: 1px solid black;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.title2{
+    display: flex;
+    justify-content: center;
+}
+.title3{
+    display: flex;
+    justify-content: center;
+}
+.t2{
+    display: flex;
+    justify-content: center;
+}
+.headOfice{
+    border: 2px solid black;
+    height: 50px;
+    margin-top: 40px;
+    font-size: 20px;
+    height: 70px;
+    
+}
+.m{
+    margin-left: 15%;
+    font-size: 20px;
+    margin-top: 20px;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

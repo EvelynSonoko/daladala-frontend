@@ -1,0 +1,59 @@
+<mat-card>
+   <mat-card-content>
+      <div class="container-fluid">
+         <div class="card card-info">
+            <div class="card-header">
+               <h3 class="card-title">ROUTE</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+                  <form  [formGroup]="routeForm" autocomplete="off">
+                     <div class="card-body">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="row">
+                                 <div class="col-md-4">
+                                    <div class="form-group">
+                                       <label>Route ID</label>
+                                       <input type="number" value="" placeholder=" route number" class="form-control" formControlName="id" required/>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                    <div class="form-group">
+                                    <label>Route Name</label>
+                                        <input type="text" value="" placeholder=" route name" class="form-control" formControlName="route_name" required/>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                    <div class="form-group">
+                                       <label>Route type</label>
+                                       <select class="form-control" formControlName="route_type" >
+                                       	  <option></option>
+                                          <option>Kaskazini</option>
+                                          <option>Kusini</option>
+                                          <option>Mjini</option>
+                                          <option>Kusini vs Kaskazini</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                    <div class="form-group">
+                                       <label>Route fees</label>
+                                       <input type="number" value="" class="form-control" formControlName="route_fees" placeholder=" fees" required/>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                     </div>
+                     <!-- /.card-body -->
+
+                     <div class="card-footer">
+                        <button mat-raised-button  (click)="saveroute()">Save</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </mat-card-content>
+      </mat-card>

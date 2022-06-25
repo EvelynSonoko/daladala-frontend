@@ -1,0 +1,119 @@
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="assets/logos.png" width="150" style="margin-top: 60px;margin-bottom: -20px;">
+            <h1>Welcome</h1>
+            <h2>Daladala Route Monitoring System</h2>
+
+            <!-- <input type="submit" name="" value="Login"/><br/> -->
+        </div>
+        <div class="col-md-9 register-right">
+            <h3 class="register-heading">Register As the owner of the Daladala</h3>
+            <form [formGroup]="userForm">
+                <div class="row register-form">
+                    <div class="col-md-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Name</mat-label>
+                            <input matInput type="text" formControlName="name" placeholder="Name *" value="" required />
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Age</mat-label>
+                            <input matInput type="number" formControlName="age" placeholder="Age *" value="" min="18"
+                                required />
+                        </mat-form-field>
+
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Phone Number</mat-label>
+                            <input matInput type="number" formControlName="phone_no" placeholder="Phone_No *"
+                                required />
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Occupation</mat-label>
+                            <input matInput type="text" formControlName="occupation" value="" placeholder="Occupation *"
+                                required />
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Address</mat-label>
+                            <input matInput type="text" formControlName="address" placeholder="Address *" value="" />
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Owner ID</mat-label>
+                            <input matInput type="text" formControlName="id" value="" placeholder="Owner Id *"
+                                required />
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput type="email" formControlName="email" placeholder="Your Email *" required />
+                        </mat-form-field>
+                        <div class="form-group">
+                            <select class="form-control" formControlName="gender" placeholder="Gender *" value="">
+                                <option class="hidden" selected disabled>Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Birth Date</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="dob">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Date Record</mat-label>
+                            <input matInput [matDatepicker]="picker2" formControlName="date_record">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                            <mat-datepicker #picker2></mat-datepicker>
+                        </mat-form-field>
+
+                        <div class="form-group">
+                            <!-- <mat-form-field appearance="fill">
+                                                <mat-label>Select ID Type</mat-label>
+                                                <mat-select [(value)]="selected" formControlName="id_type">
+                                                    <mat-option></mat-option>
+                                                    <mat-option>National ID</mat-option>
+                                                    <mat-option>Passport Card</mat-option>
+                                                    <mat-option>License ID</mat-option>
+                                                </mat-select>
+                                            </mat-form-field> -->
+                            <select class="form-control" formControlName="id_type">
+                                <option></option>
+                                <option>National ID</option>
+                                <option>Passport card</option>
+                                <option>License ID</option>
+                            </select>
+                        </div>
+                        <!-- <div class="form-group">
+                                            <select class="form-control">
+                                                <option  class="hidden"  selected disabled >Please select Id type</option>
+                                                <option>National ID</option>
+                                                <option>Passport card</option>
+                                                <option>License ID</option>
+                                            </select>
+                                        </div> -->
+
+                        <!-- <div class="form-group">
+                                            <input type="text" formControlName="occupation" value="" placeholder="Occupation *" class="form-control" required />
+                                        </div> -->
+                        <!-- <div class="form-group">
+                                            <input type="text" formControlName="id" value="" placeholder="Owner Id *" class="form-control" required />
+                                        </div> -->
+
+                    </div>
+                    <div>
+                        <input type="submit" value="Register" class="btn" [disabled]="userForm.invalid"
+                            (click)="saveuser()">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>

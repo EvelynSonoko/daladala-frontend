@@ -1,0 +1,27 @@
+<div class="mainDiv">
+    <div class="cardStyle">
+      <form [formGroup]="changeform">
+        
+        <h2 class="formTitle">
+          Change Password
+        </h2>
+        <p *ngIf="valid">password doesn't match</p>
+      <div class="inputDiv">
+        <label class="inputLabel" for="password">New Password</label>
+        <input type="password" id="password" formControlName="password" required>
+      </div>
+        
+      <div class="inputDiv">
+        <label class="inputLabel" for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" formControlName="confirmPassword">
+      </div>
+      
+      <div class="buttonWrapper">
+        <button type="submit" id="submitButton" (click)="changePassword()" class="submitButton pure-button pure-button-primary">
+          <span>Change Password</span>
+        </button>
+      </div>
+        
+    </form>
+    </div>
+  </div>

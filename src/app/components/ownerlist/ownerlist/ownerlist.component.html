@@ -1,0 +1,49 @@
+
+ <mat-card>
+     
+     <mat-card-title>Owner List</mat-card-title>
+     <mat-card-content>
+         <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+        <table id="table" class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                <th>ID number</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Birth Date</th>
+                <th>Phone_No</th>
+                <th>Date record</th>
+                <th>Occupation</th>
+                <th>Type Card</th>
+                <th>Email</th>
+                
+                 <th class="text-right">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let owner of data">
+                <td>{{owner.id}}</td>
+                <td>{{owner.name}}</td>
+                <td>{{owner.address}}</td>
+                <td>{{owner.age}}</td>
+                <td>{{owner.gender}}</td>
+                <td>{{owner.dob}}</td>
+                <td>{{owner.phone_no}}</td>
+                <td>{{owner.date_record}}</td>
+                <td>{{owner.occupation}}</td>
+                <td>{{owner.id_type}}</td>
+                <td>{{owner.email}}</td>
+                <td class="text-right"><button  (click)="updateowner(owner)" style="color: blue;"><span><mat-icon>edit</mat-icon></span></button>
+                   <button  (click)="delete(owner.id)" style="color: red;"><mat-icon>delete</mat-icon></button></td> 
+            
+                
+                </tr>
+                </tbody>
+                </table>
+            
+     </mat-card-content>
+ </mat-card>
+
+

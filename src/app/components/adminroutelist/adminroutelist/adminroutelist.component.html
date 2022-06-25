@@ -1,0 +1,35 @@
+
+ <mat-card>
+    <mat-card-title>Route List</mat-card-title>
+    <mat-card-content>
+        <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+        <button mat-raised-button (click)="addroute()" style="margin-left: 59rem;background-color: rgb(93, 93, 155);" >Add Route</button>
+       <table id="table" class="table table-bordered table-striped">
+           <thead class="thead-dark">
+               <tr>
+               <th>Route Id</th>
+               <th>Route Name</th>
+               <th>Route Type</th>
+               <th>Route Fees </th>
+               <th class="text-right">Action</th>
+               </tr>
+               </thead>
+               <tbody>
+               <tr *ngFor="let route of data">
+               <td>{{route.id}}</td>
+               <td>{{route.route_name}}</td>
+               <td>{{route.route_type}}</td>
+               <td>{{route.route_fees}}</td>
+               <td class="text-right"><button (click)="updateroute(route)" style="color:blue;"><span><mat-icon>edit</mat-icon></span></button> 
+                <button (click)="delete(route.id)" style="color: red;"><mat-icon>delete</mat-icon></button></td>
+               </tr>
+               </tbody>
+               </table>
+           
+    </mat-card-content>
+</mat-card>
+
+
+
+
+

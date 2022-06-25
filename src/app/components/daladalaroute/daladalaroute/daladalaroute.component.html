@@ -1,0 +1,78 @@
+<mat-card>
+   <mat-card-content>
+      <div class="container-fluid">
+         <div class="card card-info">
+            <div class="card-header">
+               <h3 class="card-title">DALADALA ROUTE</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+              <form [formGroup]="daladalarouteform">
+                 <div class="card-body">
+                    <div class="row">
+                       <div class="col-md-12">
+                          <div class="row">
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                   <label>Daladala ID</label>
+                                  <select class="form-control"  formControlName="daladala-id" required >
+                                      <option></option>
+                                   </select>
+                                </div>
+                             </div>
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                   <label>Route Number</label>
+                                   <select class="form-control"  formControlName="route_id" required >
+                                    <option></option>
+                                   </select>
+                                </div>
+                             </div>
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                   <label>DaladalaRoute ID</label>
+                                     <input  type="number" class="form-control" formControlName="id" value="" >
+                                </div>
+                             </div>
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                   <label>Date Of start</label>
+                                  <input  type="date"  class="form-control" formControlName="start" value=" date('Y-m-d')"> 
+                                </div>
+                             </div>
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                   <label>Date Expire</label>
+                                   <input type="date"  class="form-control" formControlName="expire" value=" (date('Y')+1).'-'.date('m').'-'.date('d')" >
+                                </div>
+                             </div>
+                     
+                             
+                             <div class="col-md-4">
+                                <div class="form-group">
+                                   <label>Receipt Number</label>
+                                    <input type="number" class="form-control" formControlName="receipt_no" value="" >
+                                   </div>                                    
+                             </div>
+                             <div class="col-md-4">
+                              <div class="form-group">
+                                 <label>Status</label>
+                                  <input type="text" class="form-control" formControlName="status" value="" >
+                                 </div>                                    
+                           </div>
+                          </div>
+                       </div>
+                    </div>
+
+                 </div>
+                 <!-- /.card-body -->
+
+                 <div class="card-footer">
+                    <button mat-raised-button (click)="save()">Save Route</button>
+                 </div>
+              </form>
+            </div>
+         </div>
+      </mat-card-content>
+   </mat-card>
+        

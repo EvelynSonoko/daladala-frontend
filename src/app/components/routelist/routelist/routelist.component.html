@@ -1,0 +1,44 @@
+
+ <mat-card>
+    <mat-card-title>Route List</mat-card-title>
+    <mat-card-content>
+        <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+       <table id="table" class="table table-bordered table-striped">
+           <thead class="thead-dark">
+               <tr>
+               <th>Route Id</th>
+               <th>Route Name</th>
+               <th>Route Type</th>
+               <th>Route Fees </th>
+               <th class="text-right">Action</th>
+               </tr>
+               </thead>
+               <tbody>
+               <tr *ngFor="let route of data">
+               <td>{{route.id}}</td>
+               <td>{{route.route_name}}</td>
+               <td>{{route.route_type}}</td>
+               <td>{{route.route_fees}}</td>
+               <td class="text-center"><button mat-raised-button (click)="requestroute(route.id)" style="background-color: cornflowerblue;"><span>REQUEST</span></button> </td>
+               </tr>
+               </tbody>
+               </table>
+           
+    </mat-card-content>
+</mat-card>
+<ng-template #receipt>
+            <form [formGroup]="routeform" autocomplete="off">
+                <div class="row">
+                    <label>Receipt Number</label>
+                    <input  type="number" class="form-control" formControlName="receipt_no" value="" >                                   
+                </div>
+                &nbsp;
+                <div class="col">
+                    <button mat-raised-button (click)="save()">Save Route</button>
+                </div>
+                   
+             </form>
+</ng-template>
+
+
+

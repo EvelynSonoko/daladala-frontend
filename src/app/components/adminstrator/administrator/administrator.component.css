@@ -1,0 +1,21 @@
+#sidenavAccordion{
+    background-color: rgb(8, 8, 51);
+}
+.sb-topnav {
+    background-color: cornflowerblue;
+}
+.sb-sidenav-footer{
+     margin-top: 99%;
+     position: relative;
+     background-color: black;
+     color: white;
+}
+.nav-link{
+    color: white;
+    margin-left: 20px;
+    font-size: large;
+   
+}
+.nav{
+    margin-top: 10px;
+}

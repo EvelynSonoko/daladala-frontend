@@ -1,0 +1,42 @@
+
+ <mat-card>
+    <mat-card-title>Daladala List</mat-card-title>
+    <mat-card-content>
+      <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+       <table id="table" class="table table-bordered table-striped">
+          <thead class="thead-dark">
+               <tr>
+               <th>Daladala Id</th>
+               <th>Id Mark</th>
+               <th>Model</th>
+               <th>No_Passenger</th>
+               <th>Owner Id</th>
+               <th>Insurance No</th>
+               <th>Lisence No</th>
+               <th>Place of Issue</th>
+               <th>Driver Id</th>
+               <th class="text-right">Action</th>
+               </tr>
+               </thead>
+               <tbody>
+               <tr *ngFor="let daladala of data">
+               <td>{{daladala.daladala_id}}</td>
+               <td>{{daladala.id_mark}}</td>
+               <td>{{daladala.model}}</td>
+               <td>{{daladala.no_pas}}</td>
+               <td>{{daladala.owner_id}}</td>
+               <td>{{daladala.insurance_no}}</td>
+               <td>{{daladala.lis_no}}</td>
+               <td>{{daladala.place}}</td>
+               <td>{{daladala.driver_id}}</td>
+               <td class="text-right"><button  (click)="updatedaladala(daladala)" style="color: blue;"><span><mat-icon>edit</mat-icon></span></button>
+                <button (click)="delete(daladala.daladala_id)" style="color: red;"><mat-icon>delete</mat-icon></button>
+               </tr>
+               </tbody>
+               </table>
+           
+    </mat-card-content>
+</mat-card>
+
+
+

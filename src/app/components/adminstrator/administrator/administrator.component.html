@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <nav class="sb-topnav fixed-top" >
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3">Daladala Route Monitoring System</a>
+        <form class="d-none d-md-inline-block" style="margin-left:15rem">
+            <div class="input-group">
+                <button mat-raised-button (click)="logout()" style="background-color:rgb(106, 106, 158);"><mat-icon>logout</mat-icon>Log out</button>
+            </div>
+        </form>
+    </nav>
+   <div class="layoutSidenav_nav">
+       <!-- color kwny sidebar -->
+        <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="nav">Dashboard</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="ownerlist">Owner List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="driverlist">Driver List</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="daladalalist">Daladala List</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" routerLink="adminroutelist">Routes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="requestlist">Request List</a>
+                </li>
+              </ul>
+            <div class="sb-sidenav-footer">
+                <div class="small">Logged in as:</div>
+                Administrator
+            </div>
+        </nav>
+    </div>
+    <div class="content " style="margin-top: 50px;">
+        <router-outlet ></router-outlet>
+    </div>
+</body>
+</html>

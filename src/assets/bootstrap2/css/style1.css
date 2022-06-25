@@ -1,0 +1,25 @@
+.layoutSidenav_nav{
+    min-width: 17rem;
+    width: 17rem;
+    position: fixed;
+    top: 3rem;
+    background-color:  #326686;
+    height: 100vh;
+    
+}
+
+nav{
+    height: 4rem;
+}
+.content{
+    width: calc(100% - 17rem);
+    margin-left: 17rem;
+    background-color: rgb(227, 231, 230);
+}
+.sb-sidenav-footer{
+    margin-top: 26rem;
+}
+.input-group{
+    margin-left: 48rem;
+}
+

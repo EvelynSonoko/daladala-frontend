@@ -1,0 +1,13 @@
+.sidebar li a{
+    color: aliceblue;
+}
+.sidebar li a:hover{
+    color:  aliceblue;
+    /* background-color: rgb(6, 130, 238);  */
+}
+.sidebar li{
+    list-style-type: none;
+}
+.sidebar-container{
+    background-color:  #022035;
+}

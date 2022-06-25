@@ -1,0 +1,16 @@
+<mat-card>
+   <mat-card-content>
+      <form [formGroup]="daladalarouteform">
+         <div class="card-body">
+            <div class="row">
+               <div class="form-group">
+                  <label>Date Expire</label>
+                  <input type="date" class="form-control" formControlName="expire"
+                     value=" (date('Y')+1).'-'.date('m').'-'.date('d')">
+               </div>
+            </div>
+         </div>
+         <button mat-raised-button (click)="Update()">Update</button>
+      </form>
+   </mat-card-content>
+</mat-card>

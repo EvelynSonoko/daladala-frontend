@@ -1,0 +1,89 @@
+
+<mat-card>
+   <mat-card-content>
+      <div class="container-fluid">
+         <div class="card card-info">
+            <div class="card-header">
+               <h3 class="card-title">DALADALA INFORMATION</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form [formGroup]="daladalaForm" autocomplete="off">
+               <div class="card-body">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <div class="row">
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                 <label>Daladala ID</label>
+                                  <input type="text" placeholder="eg. Z 234 CB" class="form-control" formControlName="daladala_id"> 
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                 <label>ID Mark</label>
+                                 <input type="text" placeholder="eg. D7060"  class="form-control" formControlName="id_mark" required /> 
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                 <label>Model Number</label>
+                                  <input type="text" placeholder="eg. TOYOTA-483"  class="form-control" formControlName="model" required >
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                 <label>Passenger</label>
+                                 <input type="number" max="40" min="12"  class="form-control" formControlName="no_pas" required > 
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                 <label>Owner Id Number</label>
+                                 <input type="text" max="40" min="12"  class="form-control" formControlName="owner_id" readonly required >
+
+                           </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                 <label>Driver ID Number</label>
+                                 <input type="text" max="40" min="12"  class="form-control" formControlName="driver_id" readonly required > 
+                                
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                 <label>Place of issue</label>
+                                  <input type="text"  class="form-control" formControlName="place" required >
+                                 </div>                                    
+                           </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                 <label>Road licence no</label>
+                                  <input type="text"  class="form-control" formControlName="lis_no" required >
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                 <label>Car insurence no</label>
+                                  <input type="text"  class="form-control" formControlName="insurance_no" required >
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+   
+               </div>
+               <!-- /.card-body -->
+   
+               <div class="card-footer">
+                  <button mat-raised-button (click)="savedaladala()">Save</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </mat-card-content>
+</mat-card>
+
+        

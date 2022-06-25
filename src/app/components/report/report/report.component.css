@@ -1,0 +1,19 @@
+.cont{
+    justify-content: center;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.title2{
+    display: flex;
+    justify-content: center;
+}
+.title3{
+    display: flex;
+    justify-content: center;
+}

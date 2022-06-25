@@ -1,0 +1,38 @@
+<div class="jumbotron">
+    <h1>DALADALA ROUTE MONITORING SYSTEM</h1>
+    <h2>Welcome {{users.name}}</h2>
+
+  </div>
+  <mat-card *ngIf="visible">
+    <mat-card-title>DaladalaRoute List</mat-card-title>
+    <mat-card-content>
+        <table id="table" class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                <th>Plate Number</th>
+                <th>Route Number</th>
+                <th>Start Date</th>
+                <th>Expire Date</th>
+                <th>Receipt Number</th>
+                <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let daladalaroute of daladalarouterquest">
+                <td>{{daladalaroute.daladala_id}}</td>
+                <td>{{daladalaroute.route_id}}</td>
+                <td>{{daladalaroute.start}}</td>
+                <td>{{daladalaroute.expire}}</td>
+                <td>{{daladalaroute.receipt_no}}</td>
+                <td>
+                    <span *ngIf="!daladalaroute.status" style="background-color: red; border-radius: 4px; color: whitesmoke;">pendding</span>
+                    <span *ngIf="daladalaroute.status" style="background-color: green; border-radius: 4px; color: whitesmoke;">start</span>
+                    <span><button mat-raised-button color="primary" style="margin-left: 15px;" (click)="[send(daladalaroute),report()]"><mat-icon>print</mat-icon>Print</button></span>
+                </td>
+            
+                
+                </tr>
+                </tbody>
+                </table>
+    </mat-card-content>
+</mat-card>

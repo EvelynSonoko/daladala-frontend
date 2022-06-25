@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-title>Request List</mat-card-title>
+    <mat-card-content>
+        <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+        <table id="table" class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                <th>S/N</th>
+                <th>Plate Number</th>
+                <th>Route Number</th>
+                <th>Start Date</th>
+                <th>Expire Date</th>
+                <th>Receipt Number</th>
+                <th>Status</th>
+                <th class="text-right">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let droute of data">
+                <td>{{droute.id}}</td>
+                <td>{{droute.daladala_id}}</td>
+                <td>{{droute.route_id}}</td>
+                <td>{{droute.start}}</td>
+                <td>{{droute.expire}}</td>
+                <td>{{droute.receipt_no}}</td>
+                <td>
+                    <span *ngIf="droute.status">start</span>
+                    <span *ngIf="!droute.status">pending</span>
+                </td>
+                <td class="text-right"><button (click)="updatedroute(droute)" style="color: blue;"><span><mat-icon>edit</mat-icon></span></button>
+                    <button (click)="delete(droute.id)" style="color: red;"><mat-icon>delete</mat-icon></button>
+                    <button (click)="change(droute)" style="color: green;"><mat-icon>mode_standby</mat-icon></button></td>
+                </tr>
+                </tbody>
+                </table>
+    </mat-card-content>
+</mat-card>
+
+
+

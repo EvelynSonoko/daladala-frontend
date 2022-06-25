@@ -1,0 +1,41 @@
+<mat-card>
+    <mat-card-title>Driver List</mat-card-title>
+    <mat-card-content>
+        <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+        <table id="table" class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                <th>Driver ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Age</th>
+                <th>Lisence No</th>
+                <th>Tel No</th>
+                <th>Date of Birth</th>
+                <th>Gender</th>
+                <th>Lisence Type</th>
+                <th>Expiry Date</th>
+                <th>Owner Id</th>
+                 <th class="text-right">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let driver of data">
+                <td>{{driver.id}}</td>
+                <td>{{driver.driver_name}}</td>
+                <td>{{driver.address}}</td>
+                <td>{{driver.age}}</td>
+                <td>{{driver.lis_no}}</td>
+                <td>{{driver.tel_no}}</td>
+                <td>{{driver.dob}}</td>
+                <td>{{driver.gender}}</td>
+                <td>{{driver.lis_type}}</td>
+                <td>{{driver.ex_date}}</td>
+                <td>{{driver.owner_id}}</td>
+                <td><button (click)="updatedriver(driver)" style="color: blue;"><span><mat-icon>edit</mat-icon></span></button>
+                    <button (click)="delete(driver.id)" style="color: red;"><mat-icon>delete</mat-icon></button>
+                </tr>
+                </tbody>
+                </table>
+    </mat-card-content>
+</mat-card>
