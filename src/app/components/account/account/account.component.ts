@@ -7,15 +7,23 @@ import { OwnerserviceService } from 'src/app/services/owner_service/ownerservice
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
-  userdetails:any
+  ownerdetails:any
+  driverdetails:any
+  daladetails:any
 
   constructor(private ownerservice:OwnerserviceService) { }
 
   ngOnInit(): void {
     var user=JSON.parse(sessionStorage.getItem("user")!)
-    console.log("onprofil=>",user)
     this.ownerservice.getByEmail(user.email).subscribe((res:any)=>{
-      this.userdetails=res
+      this.ownerdetails=res
+      res.driverList.forEach((element:any)=>{
+        this.driverdetails=element
+      });
+      res.daladalaList.forEach((element:any)=>{
+        this.daladetails=element
+
+      })
     })
   }
 

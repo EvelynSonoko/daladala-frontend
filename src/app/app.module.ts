@@ -27,7 +27,6 @@ import { MatIconModule} from '@angular/material/icon';
 import { MatProgressBarModule } from "@angular/material/progress-bar";
 import { UpdatedriverComponent } from './components/updatedriver/updatedriver/updatedriver.component';
 import { UpdateownerComponent } from './components/updateowner/updateowner/updateowner.component';
-import { LoginComponent } from './components/login/login/login.component';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldControl, MatFormFieldModule } from '@angular/material/form-field';
 import { AdministratorComponent } from './components/adminstrator/administrator/administrator.component';
@@ -69,7 +68,6 @@ import { MatSelectModule } from '@angular/material/select';
     RouteupdateComponent,
     UpdatedriverComponent,
     UpdateownerComponent,
-    LoginComponent,
     AdministratorComponent,
     NavComponent,
     AdminroutelistComponent,

@@ -4,7 +4,13 @@
 
   </div>
   <mat-card *ngIf="visible">
-    <mat-card-title>DaladalaRoute List</mat-card-title>
+    <div class="d-flex justify-content-end">
+        <span><button mat-raised-button color="primary" style="margin-left: 15px;" (click)="[send(),report()]"><mat-icon>print</mat-icon>Print</button></span>
+    </div>
+    
+    <mat-card-title>DaladalaRoute List
+        
+    </mat-card-title>
     <mat-card-content>
         <table id="table" class="table table-bordered table-striped">
             <thead class="thead-dark">
@@ -27,7 +33,7 @@
                 <td>
                     <span *ngIf="!daladalaroute.status" style="background-color: red; border-radius: 4px; color: whitesmoke;">pendding</span>
                     <span *ngIf="daladalaroute.status" style="background-color: green; border-radius: 4px; color: whitesmoke;">start</span>
-                    <span><button mat-raised-button color="primary" style="margin-left: 15px;" (click)="[send(daladalaroute),report()]"><mat-icon>print</mat-icon>Print</button></span>
+                    <!-- <span><button mat-raised-button color="primary" style="margin-left: 15px;" (click)="[send(daladalaroute),report()]"><mat-icon>print</mat-icon>Print</button></span> -->
                 </td>
             
                 

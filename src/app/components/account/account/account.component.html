@@ -3,95 +3,134 @@
     
           <!-- Breadcrumb -->
           <nav aria-label="breadcrumb" class="main-breadcrumb">
-              <h1 class="breadcrumb-item active" aria-current="page">My Profile</h1>
+              <h1 class="breadcrumb-item active" aria-current="page" style="color: black;">My Profile</h1>
           </nav>
             <div class="col-md-8">
               <div class="card mb-3">
                 <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Full Name</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      {{userdetails.name}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Email</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{userdetails.email}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Phone</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{userdetails.phone_no}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Age</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{userdetails.age}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Gender</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{userdetails.gender}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Date of Birth</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{userdetails.dob}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Occupation</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{userdetails.occupation}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Address</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        {{userdetails.address}}
-                    </div>
-                  </div>
-                  <hr>
-                  <!-- <div class="row">
-                    <div class="col-sm-12">
-                      <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
-                    </div>
-                  </div> -->
+                  
+    <table width="80%" height=""></table>
+    <tr>
+        <td>
+            <form>
+                <div class="tb">
+                    <fieldset>
+                        <legend><b>Personal Information</b></legend>
+                        <table width="90%" height="50%">
+                            <tr>
+                                <td>Full Name:{{ownerdetails.name}} </td>
+                                
+                                <td>Address:{{ownerdetails.address}}</td>
+                
+                            </tr>
+                            <tr>
+                                <td>Age:{{ownerdetails.age}}</td>
+                                
+                                <td>Gender:{{ownerdetails.gender}}</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Date of Birth:{{ownerdetails.dob}}</td>
+                                
+                                <td>Phone_No:{{ownerdetails.phone_no}}</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Date record:{{ownerdetails.date_record}}</td>
+                                
+                                <td>Occupation:{{ownerdetails.occupation}}</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Type of ID card:{{ownerdetails.id_type}}</td>
+                                
+                                <td>ID number:{{ownerdetails.id}}</td>
+                                
+                            </tr>
+                        </table>
+                        </fieldset>
                 </div>
+                <div class="tb">
+                  <fieldset>
+                      <legend><b>Driver Information</b></legend>
+                      <table width="100%" height="50%" >
+                          <tr>
+                              <td>Driver ID number:{{driverdetails.id}}</td>
+                              
+                              <td>Full Name:{{driverdetails.driver_name}}</td>
+                              
+                          </tr>
+                          <tr>
+                              <td>Address:{{driverdetails.address}}</td>
+                              
+                              <td>Age:{{driverdetails.age}}</td>
+                              
+                          </tr>
+                          <tr>
+                              <td>Date of Birth:{{driverdetails.dob}}</td>
+                              
+                              <td>licence No:{{driverdetails.lis_no}}</td>
+                              
+                          </tr>
+                          <tr>
+                              <td>licence Type:{{driverdetails.lis_type}}</td>
+                              
+                              <td>Gender:{{driverdetails.gender}}</td>
+                              
+                          </tr>
+                          <tr>
+                              <td>Phone No:{{driverdetails.tel_no}}</td>
+                              
+                              <td>Expire date:{{driverdetails.ex_date}}</td>
+                              
+                          </tr>
+                      </table>
+                  </fieldset>
               </div>
+              <div class="tb">
+                <fieldset>
+                    <legend ><b>Daladala Information</b></legend>
 
-             
-
+                    <table width="90%" height="50%" style="margin-right: 20rem;" >
+                        <tr>
+                            <td>Daladala ID:{{daladetails.daladala_id}}</td>
+                            
+                            <td>ID Mark:{{daladetails.id_mark}}</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Model Number:{{daladetails.model}}</td>
+                            
+                            <td>Passenger:{{daladetails.no_pas}}</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Place of issue:{{daladetails.place}}</td>
+                            
+                            <td>Road licence no:{{daladetails.daladala_id}}</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Car insurance no:{{daladetails.insurance_no}}</td>
+                            
+                        </tr>
+                    </table>
+                </fieldset>
             </div>
-          </div>
+            </form>
+            </td>
+            </tr>
+            </div>
+              </div>
+              </div>
+    </div>
+</div>
+<footer class="py-4 bg-light">
+  <div class="container-fluid px-4">
+      <div class="d-flex align-items-center justify-content-between small">
+          <div class="text-muted"> Daladala Routes | &copy 2022 | Daladala Route Monitoring System </div>
+      </div>
+  </div>
+</footer>
 
-        </div>
 

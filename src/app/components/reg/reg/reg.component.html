@@ -4,6 +4,7 @@
             <img src="assets/logos.png" width="150" style="margin-top: 60px;margin-bottom: -20px;">
             <h1>Welcome</h1>
             <h2>Daladala Route Monitoring System</h2>
+            <h3>Payment should be made through PBZ Account No:560976656</h3>
 
             <!-- <input type="submit" name="" value="Login"/><br/> -->
         </div>
@@ -49,13 +50,13 @@
                             <mat-label>Email</mat-label>
                             <input matInput type="email" formControlName="email" placeholder="Your Email *" required />
                         </mat-form-field>
-                        <div class="form-group">
-                            <select class="form-control" formControlName="gender" placeholder="Gender *" value="">
-                                <option class="hidden" selected disabled>Gender</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                            </select>
-                        </div>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Gender</mat-label>
+                            <mat-select formControlName="gender">
+                                <mat-option value="male">Male</mat-option>
+                                <mat-option value="female">Female</mat-option>
+                            </mat-select>
+                        </mat-form-field>
                     </div>
                     <div class="col-md-4">
                         <mat-form-field appearance="outline">
@@ -72,39 +73,14 @@
                             <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                             <mat-datepicker #picker2></mat-datepicker>
                         </mat-form-field>
-
-                        <div class="form-group">
-                            <!-- <mat-form-field appearance="fill">
-                                                <mat-label>Select ID Type</mat-label>
-                                                <mat-select [(value)]="selected" formControlName="id_type">
-                                                    <mat-option></mat-option>
-                                                    <mat-option>National ID</mat-option>
-                                                    <mat-option>Passport Card</mat-option>
-                                                    <mat-option>License ID</mat-option>
-                                                </mat-select>
-                                            </mat-form-field> -->
-                            <select class="form-control" formControlName="id_type">
-                                <option></option>
-                                <option>National ID</option>
-                                <option>Passport card</option>
-                                <option>License ID</option>
-                            </select>
-                        </div>
-                        <!-- <div class="form-group">
-                                            <select class="form-control">
-                                                <option  class="hidden"  selected disabled >Please select Id type</option>
-                                                <option>National ID</option>
-                                                <option>Passport card</option>
-                                                <option>License ID</option>
-                                            </select>
-                                        </div> -->
-
-                        <!-- <div class="form-group">
-                                            <input type="text" formControlName="occupation" value="" placeholder="Occupation *" class="form-control" required />
-                                        </div> -->
-                        <!-- <div class="form-group">
-                                            <input type="text" formControlName="id" value="" placeholder="Owner Id *" class="form-control" required />
-                                        </div> -->
+                        <mat-form-field appearance="outline">
+                            <mat-label>Select ID Type</mat-label>
+                            <mat-select formControlName="id_type">
+                                <mat-option value="national id">National ID</mat-option>
+                                <mat-option value="passport card">Passport Card</mat-option>
+                                <mat-option value="license id">License ID</mat-option>
+                            </mat-select>
+                        </mat-form-field>
 
                     </div>
                     <div>

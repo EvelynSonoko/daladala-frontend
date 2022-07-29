@@ -10,12 +10,13 @@ import { RouteserviceService } from 'src/app/services/routes_service/routeservic
 export class AdminroutelistComponent implements OnInit {
   data:any
   loading:Boolean
-
   constructor(private router:Router,private routeservice:RouteserviceService) { }
 
   ngOnInit(): void {
     this.getall()
+    
   }
+  
   getall(){
     this.loading=true
     this.routeservice.getall().subscribe((res:any) =>{
@@ -35,5 +36,4 @@ export class AdminroutelistComponent implements OnInit {
       this.getall()
     })
   }
-
-  }
+}

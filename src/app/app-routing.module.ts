@@ -15,7 +15,6 @@ import { RouteupdateComponent } from './components/routeupdate/routeupdate/route
 import { HomeComponent } from './components/home/home/home.component';
 import { UpdatedriverComponent } from './components/updatedriver/updatedriver/updatedriver.component';
 import { UpdateownerComponent } from './components/updateowner/updateowner/updateowner.component';
-import { LoginComponent } from './components/login/login/login.component';
 import { AdministratorComponent } from './components/adminstrator/administrator/administrator.component';
 import { NavComponent } from './components/nav/nav/nav.component';
 import{AdminroutelistComponent} from './components/adminroutelist/adminroutelist/adminroutelist.component';
@@ -24,10 +23,9 @@ import { Login2Component } from './components/login2/login2/login2.component';
 import { ChangeComponent } from './components/change/change/change.component';
 import { UpdatedaladalaComponent } from './components/updatedaladala/updatedaladala/updatedaladala.component';
 import { RegComponent } from './components/reg/reg/reg.component';
-import { ReportComponent } from './components/report/report/report.component';
 import { Report2Component } from './components/report2/report2/report2.component';
-import { ProfileComponent } from './components/profile/profile/profile.component';
 import { AccountComponent } from './components/account/account/account.component';
+import { GuardGuard } from './components/guard/guard.guard';
 
 
 
@@ -38,6 +36,7 @@ const routes: Routes = [
   //{ path:'login', component:LoginComponent},
   //{path:'owner',component:OwnerComponent},
   {path:'administrator',component:AdministratorComponent,
+  canActivate:[GuardGuard],
     children:[
       {path:'nav',component:NavComponent},
       {path:'adminroutelist',component:AdminroutelistComponent},
@@ -49,12 +48,14 @@ const routes: Routes = [
       {path:'updateroute/:id',component: RouteupdateComponent},
       {path:'updatedriver/:id',component:UpdatedriverComponent},
       {path:'updateowner/:id',component:UpdateownerComponent},
-      {path:'updatedaladala/:id',component:UpdatedaladalaComponent}
+      {path:'updatedaladala/:id',component:UpdatedaladalaComponent},
+      
 
 
     ]
   },
   {path:'firstpage' , component: FirstpageComponent,
+  canActivate:[GuardGuard],
     children:[
       {path:'home',component:HomeComponent},
       {path:'driver' ,component:DriverComponent},
@@ -66,7 +67,7 @@ const routes: Routes = [
    ]
   },
   {path:'report2',component:Report2Component},
-  {path:'report',component:ReportComponent},
+  
   {path:'**',redirectTo:'login'}
   
 ];

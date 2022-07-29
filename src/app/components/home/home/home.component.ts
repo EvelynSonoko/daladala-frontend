@@ -12,7 +12,7 @@ import { OwnerserviceService } from 'src/app/services/owner_service/ownerservice
 export class HomeComponent implements OnInit {
   data:any[]
   email:any
-  daladalarouterquest:any[]
+  daladalarouterquest:any
   users:any
   constructor(private drouteservice:DrouteserviceService,private ownerservice:OwnerserviceService,private router:Router) { }
   visible=false
@@ -51,10 +51,13 @@ export class HomeComponent implements OnInit {
 report(){
   this.router.navigateByUrl("/report2")
 }
-send(daladalaroute:any){
-  this.drouteservice.daladala_id = daladalaroute.daladala_id
-  this.drouteservice.route_id = daladalaroute.route_id
-  this.drouteservice.start = daladalaroute.start
-  this.drouteservice.expire = daladalaroute.expire
+send(){
+  this.daladalarouterquest.forEach((daladala:any) =>{
+    this.drouteservice.daladala_id = daladala.daladala_id
+    this.drouteservice.route_id = daladala.route_id
+    this.drouteservice.start = daladala.start
+    this.drouteservice.expire = daladala.expire
+  })
+  
 }
 }

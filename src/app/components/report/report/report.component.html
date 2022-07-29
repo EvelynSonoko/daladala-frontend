@@ -23,149 +23,110 @@
     <tr>
         <td>
             <form>
-                <div>
+                <div class="tb">
                     <fieldset>
-                        <legend><b>Personal/Owner Information</b></legend>
-                        <table width="100%" height="50%">
+                        <legend style="margin-left: 27rem;"><b>Personal/Owner Information</b></legend>
+                        <table width="60%" height="50%" style="margin-left: 18rem;">
                             <tr>
-                                <td>Full Name:</td>
-                                <td><input type="text" formControlName="name" class="form-control" /> </td>
-                                <td>Address</td>
-                                <td><input type="text" formControlName="address" class="form-control" /></td>
+                                <td>Full Name:{{ownerdetails.name}} </td>
+                                
+                                <td>Address:{{ownerdetails.address}}</td>
+                
                             </tr>
                             <tr>
-                                <td>Age</td>
-                                <td><input type="number" formControlName="age" min="18" class="form-control" /></td>
-                                <td>Gender</td>
-                                <td><input type="text" formControlName="gender" class="form-control" /></td>
+                                <td>Age:{{ownerdetails.age}}</td>
+                                
+                                <td>Gender:{{ownerdetails.gender}}</td>
+                                
                             </tr>
                             <tr>
-                                <td>Date of Birth</td>
-                                <td><input type="date" formControlName="dob" class="form-control" required /></td>
-                                <td>Phone_No</td>
-                                <td><input type="number" formControlName="phone_no" class="form-control" required />
-                                </td>
+                                <td>Date of Birth:{{ownerdetails.dob}}</td>
+                                
+                                <td>Phone_No:{{ownerdetails.phone_no}}</td>
+                                
                             </tr>
                             <tr>
-                                <td>Date record</td>
-                                <td><input type="date" formControlName="date_record" class="form-control" required />
-                                </td>
-                                <td>Occupation</td>
-                                <td><input type="text" formControlName="occupation" value="" placeholder="eg. doctor"
-                                        class="form-control" required /></td>
+                                <td>Date record:{{ownerdetails.date_record}}</td>
+                                
+                                <td>Occupation:{{ownerdetails.occupation}}</td>
+                                
                             </tr>
                             <tr>
-                                <td>Type of ID card</td>
-                                <td><input type="text" formControlName="id_type" class="form-control" /></td>
-                                <td>ID number</td>
-                                <td><input type="text" formControlName="id" placeholder="eg. 6643-454-12-5"
-                                        class="form-control" required /></td>
+                                <td>Type of ID card:{{ownerdetails.id_type}}</td>
+                                
+                                <td>ID number:{{ownerdetails.id}}</td>
+                                
                             </tr>
                             <tr>
-                                <td>Email</td>
-                                <td><input type="email" formControlName="email" placeholder="eg.eve12@gmail.com"
-                                        class="form-control" required /></td>
+                                <td>Email:{{ownerdetails.email}}</td>
+                                
                             </tr>
                         </table>
                     </fieldset>
                 </div>
-                <div>
+                <div class="tb">
                     <fieldset>
-                        <legend><b>Driver Information</b></legend>
-                        <table width="100%" height="50%">
+                        <legend style="margin-left: 27rem;"><b>Driver Information</b></legend>
+                        <table width="60%" height="50%" style="margin-left: 18rem;">
                             <tr>
-                                <td>Driver ID number</td>
-                                <td><input type="text" value="" class="form-control" formControlName="id"
-                                        placeholder="National ID" required>
-                                </td>
-                                <td>Full Name</td>
-                                <td><input type="text" value="" class="form-control" formControlName="driver_name"
-                                        required>
-                                </td>
+                                <td>Driver ID number:{{driverdetails.id}}</td>
+                                
+                                <td>Full Name:{{driverdetails.driver_name}}</td>
+                                
                             </tr>
                             <tr>
-                                <td>Address</td>
-                                <td><input type="text" value="" class="form-control" formControlName="address" required>
-                                </td>
-                                <td>Age</td>
-                                <td><input type="number" value="" class="form-control" formControlName="age" required>
-                                </td>
+                                <td>Address:{{driverdetails.address}}</td>
+                                
+                                <td>Age:{{driverdetails.age}}</td>
+                                
                             </tr>
                             <tr>
-                                <td>Date of Birth</td>
-                                <td><input type="date" value="" class="form-control" formControlName="dob" required>
-                                </td>
-                                <td>licence No</td>
-                                <td><input type="text" value="" class="form-control" formControlName="lis_no" required>
-                                </td>
+                                <td>Date of Birth:{{driverdetails.dob}}</td>
+                                
+                                <td>licence No:{{driverdetails.lis_no}}</td>
+                                
                             </tr>
                             <tr>
-                                <td>licence Type</td>
-                                <td><input type="text" value="" class="form-control" formControlName="lis_type"
-                                        required></td>
-                                <td>Gender</td>
-                                <td><input type="text" value="" class="form-control" formControlName="gender" required>
-                                </td>
+                                <td>licence Type:{{driverdetails.lis_type}}</td>
+                                
+                                <td>Gender:{{driverdetails.gender}}</td>
+                                
                             </tr>
                             <tr>
-                                <td>Phone No</td>
-                                <td><input type="number" value="" class="form-control" formControlName="tel_no"
-                                        required>
-                                </td>
-                                <td>Expire date</td>
-                                <td><input type="date" value="" class="form-control" formControlName="ex_date" required>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Owner Id</td>
-                                <td><input type="text" value="" class="form-control" formControlName="owner_id"
-                                        required>
-                                </td>
+                                <td>Phone No:{{driverdetails.tel_no}}</td>
+                                
+                                <td>Expire date:{{driverdetails.ex_date}}</td>
+                                
                             </tr>
                         </table>
                     </fieldset>
                 </div>
-                <div>
+                <div class="tb">
                     <fieldset>
-                        <legend><b>Daladala Information</b></legend>
+                        <legend style="margin-left: 27rem;"><b>Daladala Information</b></legend>
 
-                        <table width="100%" height="50%">
+                        <table width="60%" height="50%" style="margin-left: 18rem;">
                             <tr>
-                                <td>Daladala ID</td>
-                                <td><input type="text" placeholder="eg. Z 234 CB" class="form-control"
-                                        formControlName="daladala_id"> </td>
-                                <td>ID Mark</td>
-                                <td><input type="text" placeholder="eg. D7060" class="form-control"
-                                        formControlName="id_mark" required />
-                                </td>
+                                <td>Daladala ID:{{daladetails.daladala_id}}</td>
+                                
+                                <td>ID Mark:{{daladetails.id_mark}}</td>
+                                
                             </tr>
                             <tr>
-                                <td>Model Number</td>
-                                <td> <input type="text" placeholder="eg. TOYOTA-483" class="form-control"
-                                        formControlName="model" required>
-                                </td>
-                                <td>Passenger</td>
-                                <td><input type="number" max="40" min="12" class="form-control" formControlName="no_pas"
-                                        required> </td>
+                                <td>Model Number:{{daladetails.model}}</td>
+                                
+                                <td>Passenger:{{daladetails.no_pas}}</td>
+                                
                             </tr>
                             <tr>
-                                <td>ID number</td>
-                                <td><input type="text" max="40" min="12" class="form-control" formControlName="owner_id"
-                                        required></td>
-                                <td>Driver ID number</td>
-                                <td><input type="text" max="40" min="12" class="form-control"
-                                        formControlName="driver_id" required> </td>
+                                <td>Place of issue:{{daladetails.place}}</td>
+                                
+                                <td>Road licence no:{{daladetails.daladala_id}}</td>
+                                
                             </tr>
                             <tr>
-                                <td>Place of issue</td>
-                                <td><input type="text" class="form-control" formControlName="place" required></td>
-                                <td>Road licence no</td>
-                                <td><input type="text" class="form-control" formControlName="lis_no" required></td>
-                            </tr>
-                            <tr>
-                                <td>Car insurence no</td>
-                                <td><input type="text" class="form-control" formControlName="insurance_no" required>
-                                </td>
+                                <td>Car insurance no:{{daladetails.insurance_no}}</td>
+                                
                             </tr>
                         </table>
                     </fieldset>
@@ -173,7 +134,7 @@
                 <div>
                     <fieldset>
                         <legend><b>Applicant Declaration</b></legend>
-                        I'm <b>name</b>;herebly acknowledge the above information and image are correct and in good
+                        I'm <b>{{ownerdetails.name}}</b> herebly acknowledge the above information and image are correct and in good
                         term and i know that the rule and regulation will be taken against all incorrect data<br />
                         Date............................. Signature.......................
                     </fieldset><br /><br />

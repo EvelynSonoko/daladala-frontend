@@ -1,5 +1,6 @@
 .cont{
     justify-content: center;
+    border: 1px solid black;
 }
 .logo{
     display: flex;
@@ -16,4 +17,9 @@
 .title3{
     display: flex;
     justify-content: center;
+}
+.tb{
+    justify-content: center;
+    border: 1px solid black;
+
 }
